@@ -1,1 +1,45 @@
 @import "base/base";
+body {
+	 background-color: #FF805D;
+}
+
+.container {
+	width: 100%;
+	height: 350px;
+	background-color: #52AACA;
+	margin-top: 200px;
+	display: flex;
+	justify-content: flex-start;
+
+	.box {
+		width: 120px;
+		height: 100%;
+		display: flex;
+		justify-content: left;
+		align-items: center;
+		padding-left: 40px;
+		background-color: #66BEDE;
+		border-right: 1px solid #54ACCC;
+		transition: width 1s;
+		overflow: hidden;
+		cursor: pointer;
+
+		& img {
+			width: 40px;
+			height: 40px;
+			background-color: #66BEDE;
+			color: #6CABBA;
+		}
+
+		.twitter::after {
+			content: ;
+		}
+
+		&:hover {
+			width: 30%;
+			height: 100%;
+			background-color: white;
+			color: #6CABBA;
+		}
+	}
+}
