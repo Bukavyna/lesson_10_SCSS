@@ -97,14 +97,26 @@ body {
   background-color: #66BEDE;
   color: #6CABBA;
 }
-.container .box .twitter::after {
-  content: M;
-}
 .container .box:hover {
-  width: 30%;
-  height: 100%;
+  display: flex;
+  width: 550px;
+}
+.container .information {
+  width: 550px;
   background-color: white;
-  color: #6CABBA;
+  padding-left: 20px;
+  padding-top: 110px;
+}
+.container .information h1 {
+  font-size: 60px;
+  font-family: Calibri;
+  font-weight: 800;
+}
+.container .information p {
+  font-size: 24px;
+  font-family: Calibri;
+  line-height: 40px;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -31,15 +31,36 @@ body {
 			color: #6CABBA;
 		}
 
-		.twitter::after {
-			content: ;
-		}
+	//	.twitter::after {
+		//	content: ;
+		//}
+
 
 		&:hover {
-			width: 30%;
-			height: 100%;
-			background-color: white;
-			color: #6CABBA;
+			display: flex;
+			width: 550px;
 		}
 	}
+
+	.information {
+		width: 550px;
+		background-color: white;
+		padding-left: 20px;
+		padding-top: 110px;
+	//	display: none;
+
+		h1 {
+			font-size: 60px;
+			font-family: Calibri;
+			font-weight: 800;
+		}
+
+		p {
+			font-size: 24px;
+			font-family: Calibri;
+			line-height: 40px;
+			font-weight: 600;
+		}
+	}
+
 }
