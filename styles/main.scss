@@ -11,56 +11,93 @@ body {
 	display: flex;
 	justify-content: flex-start;
 
-	.box {
-		width: 120px;
-		height: 100%;
+	.bloc {
+		height: 350px;
 		display: flex;
 		justify-content: left;
-		align-items: center;
-		padding-left: 40px;
-		background-color: #66BEDE;
-		border-right: 1px solid #54ACCC;
-		transition: width 1s;
-		overflow: hidden;
 		cursor: pointer;
+		overflow: hidden;
 
-		& img {
-			width: 40px;
-			height: 40px;
-			background-color: #66BEDE;
-			color: #6CABBA;
+		&:hover::after
+		&:hover .information {
+			width: 670px;
+			height: 350px;
 		}
 
-	//	.twitter::after {
-		//	content: ;
-		//}
-
-
-		&:hover {
+		.box {
+			width: 120px;
+			height: 350px;
 			display: flex;
-			width: 550px;
+			align-items: center;
+			padding-left: 40px;
+			background-color: #66BEDE;
+			border-right: 1px solid #54ACCC;
+			transition: width 1s;
+			overflow: hidden;
+			cursor: pointer;
+			position: relative;
+
+			&::after {
+				position: absolute;
+				content:"";
+				display: block;
+				width: 0;
+				height: 350px;
+				top: 0;
+				right: 0;
+				background-color: red;
+				transition: width 0.7s;
+			}
+
+			&:hover::after {
+				content:"";
+				background-size: 60px 60px;
+				width: 100%;
+				text-align: center;
+			}
+
+			& img {
+				width: 40px;
+				height: 40px;
+				background-color: #66BEDE;
+				color: #6CABBA;
+			}
+		}
+
+		.information {
+			position: relative;
+			width: 10px;
+			height: 350px;
+			background-color: white;
+			padding-top: 110px;
+			transition: width 1s;
+			transition-property: width;
+			overflow: hidden;
+			cursor: pointer;
+
+			&:hover {
+				width: 550px;
+				height: 350px;
+				transition-property: width;
+				transition-duration: 1s;
+			}
+
+			h2 {
+				width: 550px;
+				font-size: 60px;
+				font-family: Calibri, sans-serif;
+				font-weight: 800;
+			}
+
+			p {
+				width: 550px;
+				height: 60px;
+				font-size: 24px;
+				font-family: Calibri, sans-serif;
+				line-height: 40px;
+				font-weight: 600;
+				margin-top: 50px;
+			}
 		}
 	}
-
-	.information {
-		width: 550px;
-		background-color: white;
-		padding-left: 20px;
-		padding-top: 110px;
-	//	display: none;
-
-		h1 {
-			font-size: 60px;
-			font-family: Calibri;
-			font-weight: 800;
-		}
-
-		p {
-			font-size: 24px;
-			font-family: Calibri;
-			line-height: 40px;
-			font-weight: 600;
-		}
-	}
-
 }

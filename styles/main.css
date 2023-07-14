@@ -78,11 +78,21 @@ body {
   display: flex;
   justify-content: flex-start;
 }
-.container .box {
-  width: 120px;
-  height: 100%;
+.container .bloc {
+  height: 350px;
   display: flex;
   justify-content: left;
+  cursor: pointer;
+  overflow: hidden;
+}
+.container .bloc:hover::after .container .bloc:hover .information {
+  width: 670px;
+  height: 350px;
+}
+.container .bloc .box {
+  width: 120px;
+  height: 350px;
+  display: flex;
   align-items: center;
   padding-left: 40px;
   background-color: #66BEDE;
@@ -90,33 +100,62 @@ body {
   transition: width 1s;
   overflow: hidden;
   cursor: pointer;
+  position: relative;
 }
-.container .box img {
+.container .bloc .box::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 0;
+  height: 350px;
+  top: 0;
+  right: 0;
+  background-color: red;
+  transition: width 0.7s;
+}
+.container .bloc .box:hover::after {
+  content: "";
+  background-size: 60px 60px;
+  width: 100%;
+  text-align: center;
+}
+.container .bloc .box img {
   width: 40px;
   height: 40px;
   background-color: #66BEDE;
   color: #6CABBA;
 }
-.container .box:hover {
-  display: flex;
-  width: 550px;
-}
-.container .information {
-  width: 550px;
+.container .bloc .information {
+  position: relative;
+  width: 10px;
+  height: 350px;
   background-color: white;
-  padding-left: 20px;
   padding-top: 110px;
+  transition: width 1s;
+  transition-property: width;
+  overflow: hidden;
+  cursor: pointer;
 }
-.container .information h1 {
+.container .bloc .information:hover {
+  width: 550px;
+  height: 350px;
+  transition-property: width;
+  transition-duration: 1s;
+}
+.container .bloc .information h2 {
+  width: 550px;
   font-size: 60px;
-  font-family: Calibri;
+  font-family: Calibri, sans-serif;
   font-weight: 800;
 }
-.container .information p {
+.container .bloc .information p {
+  width: 550px;
+  height: 60px;
   font-size: 24px;
-  font-family: Calibri;
+  font-family: Calibri, sans-serif;
   line-height: 40px;
   font-weight: 600;
+  margin-top: 50px;
 }
 
 /*# sourceMappingURL=main.css.map */
