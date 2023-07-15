@@ -1,4 +1,5 @@
 @import "base/base";
+
 body {
 	 background-color: #FF805D;
 }
@@ -10,6 +11,7 @@ body {
 	margin-top: 200px;
 	display: flex;
 	justify-content: flex-start;
+}
 
 	.bloc {
 		height: 350px;
@@ -17,87 +19,243 @@ body {
 		justify-content: left;
 		cursor: pointer;
 		overflow: hidden;
-
-		&:hover::after
-		&:hover .information {
-			width: 670px;
-			height: 350px;
-		}
+		//transition: width 0.7s;
+	}
 
 		.box {
+			position: relative;
 			width: 120px;
 			height: 350px;
 			display: flex;
-			align-items: center;
-			padding-left: 40px;
-			background-color: #66BEDE;
-			border-right: 1px solid #54ACCC;
-			transition: width 1s;
-			overflow: hidden;
-			cursor: pointer;
-			position: relative;
+			transition: width 0.7s;
 
 			&::after {
 				position: absolute;
-				content:"";
-				display: block;
+				content: "";
 				width: 0;
 				height: 350px;
 				top: 0;
 				right: 0;
-				background-color: red;
 				transition: width 0.7s;
+				background: {
+					size: 60px 60px;
+					repeat: no-repeat;
+					position: center;
+				}
 			}
 
-			&:hover::after {
-				content:"";
-				background-size: 60px 60px;
-				width: 100%;
-				text-align: center;
-			}
-
-			& img {
-				width: 40px;
-				height: 40px;
-				background-color: #66BEDE;
-				color: #6CABBA;
-			}
-		}
-
-		.information {
-			position: relative;
-			width: 10px;
-			height: 350px;
-			background-color: white;
-			padding-top: 110px;
-			transition: width 1s;
-			transition-property: width;
-			overflow: hidden;
-			cursor: pointer;
-
-			&:hover {
-				width: 550px;
+			&::before {
+				position: absolute;
+				content: "";
+				width: 120px;
 				height: 350px;
-				transition-property: width;
-				transition-duration: 1s;
-			}
-
-			h2 {
-				width: 550px;
-				font-size: 60px;
-				font-family: Calibri, sans-serif;
-				font-weight: 800;
-			}
-
-			p {
-				width: 550px;
-				height: 60px;
-				font-size: 24px;
-				font-family: Calibri, sans-serif;
-				line-height: 40px;
-				font-weight: 600;
-				margin-top: 50px;
+				top: 0;
+				left: 0;
+				border-right: 1px solid #54ACCC;
+				transition: width 0.7s;
+				background: {
+					color: #66BEDE;
+					repeat: no-repeat;
+					position: center;
+					size: 40px 40px;
+				}
 			}
 		}
-	}
-}
+
+				.information {
+					position: relative;
+					width: 0;
+					height: 350px;
+					background-color: white;
+					padding-top: 110px;
+					overflow: hidden;
+					transition: width 0.7s;
+
+					h2 {
+						width: 550px;
+						font-size: 60px;
+						margin-left: 20px;
+						font-family: Calibri, sans-serif;
+						font-weight: 800;
+					}
+
+					p {
+						width: 550px;
+						height: 60px;
+						margin-left: 20px;
+						font-size: 24px;
+						font-family: Calibri, sans-serif;
+						line-height: 40px;
+						font-weight: 600;
+						margin-top: 50px;
+					}
+				}
+
+				.bloc:hover .information, {
+					width: 580px;
+				}
+
+
+				.bloc:hover .box_twitter::after {
+					width: 100%;
+					transition: width 0.7s;
+					background: {
+						image: url("../icons/twitter.svg");
+						color: red;
+					}
+				}
+
+				.bloc .box_twitter::before {
+					transition: width 0.7s;
+					background: {
+						image: url("../icons/twitter.svg");
+						color: #66BEDE;
+						size: 40px 40px;
+						repeat: no-repeat;
+						position: center;
+					}
+				}
+
+				.bloc:hover .box_twitter::before {
+					width: 0;
+				}
+
+
+				.bloc:hover .box_facebook::after {
+					width: 100%;
+					background-image: url("../icons/facebook.svg");
+					background-color: #356DAB;
+					transition: width 0.7s;
+				}
+
+				.bloc .box_facebook::before {
+					transition: width 1s;
+					background: {
+						image: url("../icons/facebook.svg");
+						color: #66BEDE;
+						size: 40px 40px;
+						repeat: no-repeat;
+						position: center;
+					}
+				}
+
+				.bloc:hover .box_facebook::before {
+					width: 0;
+				}
+
+
+				.bloc:hover .box_linkedin::after {
+					width: 100%;
+					background-image: url("../icons/linkedin.svg");
+					background-color: #0087C1;
+					transition: width 0.7s;
+				}
+
+				.bloc .box_linkedin::before {
+					transition: width 0.7s;
+					background: {
+						image: url("../icons/linkedin.svg");
+						color: #66BEDE;
+						size: 40px 40px;
+						repeat: no-repeat;
+						position: center;
+					}
+				}
+
+				.bloc:hover .box_linkedin::before {
+					width: 0;
+				}
+
+
+				.bloc:hover .box_instagram::after {
+					width: 100%;
+					background-image: url("../icons/instagram-alt.svg");
+					background-color: #489226;
+					transition: width 0.7s;
+				}
+
+				.bloc .box_instagram::before {
+					transition: width 0.7s;
+					background: {
+						image: url("../icons/instagram-alt.svg");
+						color: #66BEDE;
+						size: 40px 40px;
+						repeat: no-repeat;
+						position: center;
+					}
+				}
+
+				.bloc:hover .box_instagram::before {
+					width: 0;
+				}
+
+
+				.bloc:hover .box_youtube::after {
+					width: 100%;
+					background-image: url("../icons/youtube.svg");
+					background-color: #DB2721;
+					transition: width 0.7s;
+				}
+
+				.bloc .box_youtube::before {
+					transition: width 0.7s;
+					background: {
+						image: url("../icons/youtube.svg");
+						color: #66BEDE;
+						size: 40px 40px;
+						repeat: no-repeat;
+						position: center;
+					}
+				}
+
+				.bloc:hover .box_youtube::before {
+					width: 0;
+				}
+
+
+				.bloc:hover .box_tumblr::after {
+					width: 100%;
+					background-image: url("../icons/tumblr.svg");
+					background-color: #294865;
+					transition: width 0.7s;
+				}
+
+				.bloc .box_tumblr::before {
+					transition: width 0.7s;
+					background: {
+						image: url("../icons/tumblr.svg");
+						color: #66BEDE;
+						size: 40px 40px;
+						repeat: no-repeat;
+						position: center;
+					}
+				}
+
+				.bloc:hover .box_tumblr::before {
+					width: 0;
+				}
+
+				.bloc:hover .box_dribbble::after {
+					width: 100%;
+					background-image: url("../icons/dribbble.svg");
+					background-color: #F37C9C;
+					transition: width 0.7s;
+				}
+
+				.bloc .box_dribbble::before {
+					transition: width 0.7s;
+					background: {
+						image: url("../icons/dribbble.svg");
+						color: #66BEDE;
+						size: 40px 40px;
+						repeat: no-repeat;
+						position: center;
+					}
+				}
+
+				.bloc:hover .box_dribbble::before {
+					width: 0;
+				}
+
+
+
